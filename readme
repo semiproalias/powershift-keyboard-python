@@ -15,6 +15,8 @@ MAPPINGS:
 
 A - Capslock (e.g. Caps+A toggles Capslock)
 
+Bkspc - Delete (e.g. Caps+Backspace is the same as pressing Del key)
+
 Arrows - Same as Nethack:
 J - Left
 ; - Right
