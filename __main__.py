@@ -26,6 +26,11 @@ keyboard.add_hotkey('capslock+ctrl+j', lambda: keyboard.send('ctrl+left'), suppr
 keyboard.add_hotkey('capslock+ctrl+k', lambda: keyboard.send('ctrl+up'), suppress=True)
 keyboard.add_hotkey('capslock+ctrl+l', lambda: keyboard.send('ctrl+down'), suppress=True)
 keyboard.add_hotkey('capslock+ctrl+;', lambda: keyboard.send('ctrl+right'), suppress=True)
+# right-alt as control:
+keyboard.add_hotkey('capslock+right alt+j', lambda: keyboard.send('ctrl+left'), suppress=True)
+keyboard.add_hotkey('capslock+right alt+k', lambda: keyboard.send('ctrl+up'), suppress=True)
+keyboard.add_hotkey('capslock+right alt+l', lambda: keyboard.send('ctrl+down'), suppress=True)
+keyboard.add_hotkey('capslock+right alt+;', lambda: keyboard.send('ctrl+right'), suppress=True)
 
 # PAGE UP/DOWN
 keyboard.add_hotkey('capslock+comma', lambda: keyboard.send('page up'), suppress=True)
@@ -37,11 +42,16 @@ keyboard.add_hotkey('capslock+o', lambda: keyboard.send('end'), suppress=True)
 # ctrl+:
 keyboard.add_hotkey('capslock+ctrl+i', lambda: keyboard.send('ctrl+home'), suppress=True)
 keyboard.add_hotkey('capslock+ctrl+o', lambda: keyboard.send('ctrl+end'), suppress=True)
+# right-alt as control:
+keyboard.add_hotkey('capslock+right alt+i', lambda: keyboard.send('ctrl+home'), suppress=True)
+keyboard.add_hotkey('capslock+right alt+o', lambda: keyboard.send('ctrl+end'), suppress=True)
 
 # DELETE
 keyboard.add_hotkey('capslock+backspace', lambda: keyboard.send('delete'), suppress=True)
 # ctrl+:
 keyboard.add_hotkey('capslock+ctrl+backspace', lambda: keyboard.send('ctrl+delete'), suppress=True)
+# right-alt as control:
+keyboard.add_hotkey('capslock+right alt+backspace', lambda: keyboard.send('ctrl+delete'), suppress=True)
 
 # SHIFT FUNCTIONALITY - On hold due to bug (Issue #330 on GitHub)
 # keyboard.add_hotkey('capslock+ctrl+shift+j', lambda: keyboard.send('ctrl+shift+left'), suppress=True)
