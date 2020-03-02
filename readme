@@ -1,15 +1,12 @@
-Binds Caps key as a "hypershift" to move other keys to your home row. 
+This script saves time and makes life easier if you're frequently editing
+text & documents (resumes, CVs, code, scripts, etc.) in software like Word,
+Notepad, VS Code, Visual Studio, etc.
 
-I created this because I was tired of my hands having to leave the home row to 
-navigate documents (resumes, code, etc.) The mappings are loosely based on the
-Nethack key config used when the keyboard does not have a numpad.
+It binds the Caps key as a "hypershift" to move other keys to your home row. 
+Might also refer to it as function-shifting, g-shifting, etc.
 
-I originally implemented this functionality in an AHK script for Windows. 
-I currently use it through built-in functionality in the drivers of a a new 
-keyboard brand I switched to due to the plesantness of their membranes.
-That is the best experience I've had with this by far. 
-This script I wrote in Python to get this functionality into the hands of a 
-deserving friend who does not use the same brand of keyboard or OS.
+The mappings are loosely based on the Nethack key config.
+
 
 MAPPINGS:
 
@@ -31,6 +28,7 @@ Page Up/Down - Same as Nethack:
 < - Page Up
 > - Page Down
 
+
 NOTES:
 
 Ctrl:
@@ -43,6 +41,25 @@ Caps+Right-Alt+I will produce same result as Caps+Ctrl+I as in Ctrl+Home
 Shift:
 Not yet implemented due to issue in Keyboard library (Issue #330 on GitHub)
 
-Main() & While Loop:
-I believe these are only necessary if executing the script in the debugger so the hooks are 
-help open. If run from the CLI, only the hotkeys should be required.
+Main():
+I believe these are only necessary if executing the script in the debugger, so the hooks 
+are held open. If running from the CLI, Main() should not be required.
+
+BACKSTORY:
+
+I created this because I was tired of removing my hands from the home row whilst 
+navigating resumes (as an agency recruiter, I navigated a _lot_ of resumes).
+I originally implemented the functionality in an AHK script for Windows. I later
+started using the Razer Ornata keyboard due to the supreme pleasantness of their  
+membranes, and found that the Hypershift functionality in their Synapse drivers 
+provides a much more seamless experience. So, that's what I recommend if you're 
+working in a fixed location. However, I still use the script while working 
+directly on the laptop keyboard and will get around to posting it on GitHub at
+some point because I like it better.
+
+This feature set is also very handy navigating code, which is how this script came to 
+be in Python. I mentioned to a friend how much nicer it is to press CAPS+O to reach
+end-of-line than it is to move a hand to arrows/end/etc. He liked the idea a lot, but 
+he's not working in Windows and he's not using my brand. As a professional data scientist
+at one of the world's leading megacorps, I thought I'd do him a solid and have a little 
+fun re-forging it in Python.
