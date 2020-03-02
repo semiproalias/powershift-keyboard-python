@@ -1,0 +1,42 @@
+Binds Caps key as a "hypershift" to move other keys to your home row. 
+
+I created this because I was tired of my hands having to leave the home row to 
+navigate documents (resumes, code, etc.) The mappings are loosely based on the
+Nethack key config used when the keyboard does not have a numpad.
+
+I originally implemented this functionality in an AHK script for Windows. 
+I currently use it through built-in functionality in the drivers of a a new 
+keyboard brand I switched to due to the plesantness of their membranes.
+That is the best experience I've had with this by far. 
+This script I wrote in Python to get this functionality into the hands of a 
+deserving friend who does not use the same brand of keyboard or OS.
+
+MAPPINGS:
+
+A - Capslock (e.g. Caps+A toggles Capslock)
+
+Arrows - Same as Nethack:
+J - Left
+; - Right
+K - Up
+L - Down
+
+Home/End:
+I - Home
+O - Out
+
+Page Up/Down - Same as Nethack:
+< - Page Up
+> - Page Down
+
+NOTES:
+
+Ctrl:
+These all work with Ctrl+ as well, e.g. Caps+Ctrl+I will produce the same result as Ctrl+Home
+
+Right-Alt:
+For convenience, Right-Alt is set up as a shortcut for Ctrl when you are using Caps, e.g.:
+Caps+Right-Alt+I will produce same result as Caps+Ctrl+I as in Ctrl+Home
+
+Shift:
+Not yet implemented due to issue in Keyboard library (Issue #330 on GitHub)

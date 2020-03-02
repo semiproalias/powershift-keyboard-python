@@ -1,21 +1,17 @@
 #!/usr/bin/env python3
 
-# todo & notes
-# shift functionality does not currently work correctly
-# implement home/end
-# impelment backspace delete
+# NOTE: shift functionality does not currently work correctly
 
 # pip install keyboard
 import keyboard
 
 # BINDS: 
-hypershift = 'capslock'
 
 # block capslock key from changing capslock state:
-keyboard.add_hotkey(hypershift, lambda: empty(), suppress=True)
+keyboard.add_hotkey('capslock', lambda: empty(), suppress=True)
 
 # CAPSLOCK:
-keyboard.add_hotkey(hypershift + '+a', lambda: keyboard.send('capslock'), suppress=True)
+keyboard.add_hotkey('capslock+a', lambda: keyboard.send('capslock'), suppress=True)
 
 # ARROW KEYS
 keyboard.add_hotkey('capslock+j', lambda: keyboard.send('left'), suppress=True)
