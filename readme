@@ -40,3 +40,7 @@ Caps+Right-Alt+I will produce same result as Caps+Ctrl+I as in Ctrl+Home
 
 Shift:
 Not yet implemented due to issue in Keyboard library (Issue #330 on GitHub)
+
+Main() & While Loop:
+I believe these are only necessary if executing the script in the debugger so the hooks are 
+help open. If run from the CLI, only the hotkeys should be required.
