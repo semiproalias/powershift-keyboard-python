@@ -34,12 +34,21 @@ NOTES:
 Ctrl:
 These all work with Ctrl+ as well, e.g. Caps+Ctrl+I will produce the same result as Ctrl+Home
 
+Left-Alt:
+Works as alt, as in Alt+Up/Down to move a line of text up or down in Word or VS Code... Handy!
+
+
+
 Right-Alt:
 For convenience, Right-Alt is set up as a shortcut for Ctrl when you are using Caps, e.g.:
 Caps+Right-Alt+I will produce same result as Caps+Ctrl+I as in Ctrl+Home
 
 Shift:
 Not yet implemented due to issue in Keyboard library (Issue #330 on GitHub)
+
+Alt+Shift:
+Related to above. Alt+Shift+Up/Down clones a line in VS Code. Also very handy, but not 
+yet implemented due to Issue #330 in pythong Keybard library.
 
 Main():
 I believe these are only necessary if executing the script in the debugger, so the hooks 
