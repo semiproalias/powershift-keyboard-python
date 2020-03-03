@@ -2,11 +2,39 @@ This script saves time and makes life easier if you're frequently editing
 text & documents (resumes, CVs, code, scripts, etc.) in software like Word,
 Notepad, VS Code, Visual Studio, etc.
 
-It binds the Caps key as a "hypershift" to move other keys to your home row. 
-Might also refer to it as function-shifting, g-shifting, etc.
+How it Works:
+Capslock becomes the PowerShift key. Holding it changes the functionality of 
+other keys. Caps is used because it is infrequently used for its intended 
+purpose, which can be easily accessed anyway by pressing Caps+A. 
 
-The mappings are loosely based on the Nethack key config.
+The goal is to get navigation to your fingertips efficiently. The Arrow Keys,
+Page Up, Page Down, Home, and End are all accessible with your right hand.
+The all-powerful Control+Arrows, Control+Home, and Control+End are also 
+immediately accessible, by simply pressing Ctrl+Caps+[keys] or, to avoid
+uncomfortable contortions, Caps+Right-Alt+[Keys]. That's right, when Power-
+Shifted, the right-alt key becomes a control key to make it easier to quickly
+navigate your document.
 
+The PowerShift functionality is also referred to as function-shifting, 
+hypershifting (Razer), g-shifting (Logitech), etc.
+
+The mappings are loosely based on the Nethack key config. The easiest way to
+learn them is to draw it on a sticky note and use it very basic. Start with just
+Up, Down, Page Up, Page Down, Home, End. They can be seen in two columns of keys,
+all pressed by your middle and ring finger. Middle finger goes up, Ring finger 
+goes down. Easy!
+
+Known Issues: 
+Shift & Alt functionality are limited in Windows 10 due to issues
+with the Keyboard library (Issues #330 & #332). Suggest trying in Linux; just 
+un-comment the relevant commented lines in the script. For Win users, the AHK
+script will be uploaded soon and is a better alternative imo.
+
+Bottom Line: 
+Still worth using this script if you don't have something similar
+already in place, as the immediate access to basic and ctrl+arrow keys, page up/
+page down, home/end, and delete will result in huge time savings throughout the
+year if you're a frequent editor of documents.
 
 MAPPINGS:
 
@@ -34,23 +62,21 @@ NOTES:
 Ctrl:
 These all work with Ctrl+ as well, e.g. Caps+Ctrl+I will produce the same result as Ctrl+Home
 
-Left-Alt:
-Works as alt, as in Alt+Up/Down to move a line of text up or down in Word or VS Code... Handy!
-
-
-
-Right-Alt:
+Right-Alt as Ctrl when PowerShifted:
 For convenience, Right-Alt is set up as a shortcut for Ctrl when you are using Caps, e.g.:
 Caps+Right-Alt+I will produce same result as Caps+Ctrl+I as in Ctrl+Home
 
-Shift:
+Shift Functionality:
 Not yet implemented due to issue in Keyboard library (Issue #330 on GitHub)
 
-Alt+Shift:
+Alt+Shift Functionality:
 Related to above. Alt+Shift+Up/Down clones a line in VS Code. Also very handy, but not 
-yet implemented due to Issue #330 in pythong Keybard library.
+yet implemented due to Issue #330/331 in pythong Keybard library.
 
-Main():
+Left-Alt:
+Works as alt, as in Alt+Up/Down to move a line of text up or down in Word or VS Code... Handy!
+
+Superfluous Main() and __Name__ Checks:
 I believe these are only necessary if executing the script in the debugger, so the hooks 
 are held open. If running from the CLI, Main() should not be required.
 
@@ -60,8 +86,8 @@ I created this because I was tired of removing my hands from the home row whilst
 navigating resumes (as an agency recruiter, I navigated a _lot_ of resumes).
 I originally implemented the functionality in an AHK script for Windows. I later
 started using the Razer Ornata keyboard due to the supreme pleasantness of their  
-membranes, and found that the Hypershift functionality in their Synapse drivers 
-provides a much more seamless experience. So, that's what I recommend if you're 
+mechamembranes, and found that the Hypershift functionality in their Synapse drivers 
+provides a much more seamless experience in Win10. So, that's what I recommend if you're 
 working in a fixed location. However, I still use the script while working 
 directly on the laptop keyboard and will get around to posting it on GitHub at
 some point because I like it better.

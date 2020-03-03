@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# NOTE: shift functionality does not currently work correctly
+# NOTE: shift and alt functionality do not currently work correctly in Windows 10 due to noted lib issues
 
 # pip install keyboard
 import keyboard
@@ -29,6 +29,20 @@ keyboard.add_hotkey('capslock+right alt+k', lambda: keyboard.send('ctrl+up'), su
 keyboard.add_hotkey('capslock+right alt+l', lambda: keyboard.send('ctrl+down'), suppress=True)
 keyboard.add_hotkey('capslock+right alt+;', lambda: keyboard.send('ctrl+right'), suppress=True)
 
+# OMMITTED DUE TO KEYBOARD LIBRARY ISSUE 332 - Alt+Arrow Issue
+# alt+ (left-alt):
+# keyboard.add_hotkey('capslock+left alt+j', lambda: keyboard.send('left alt+left'), suppress=True)
+# keyboard.add_hotkey('capslock+left alt+k', lambda: keyboard.send('left alt+up'), suppress=True)
+# keyboard.add_hotkey('capslock+left alt+l', lambda: keyboard.send('left alt+down'), suppress=True)
+# keyboard.add_hotkey('capslock+left alt+;', lambda: keyboard.send('left alt+right'), suppress=True)
+
+# OMMITTED UNTIL KEYBOARD LIBRARY SHIFT FUNCTIONALITY (ISSUE 330) IS RESOLVED
+# # alt+shift+ (left-alt):
+# keyboard.add_hotkey('capslock+left alt+shift+j', lambda: keyboard.send('left alt+shift+left'), suppress=True)
+# keyboard.add_hotkey('capslock+left alt+shift+k', lambda: keyboard.send('left alt+shift+up'), suppress=True)
+# keyboard.add_hotkey('capslock+left alt+shift+l', lambda: keyboard.send('left alt+shift+down'), suppress=True)
+# keyboard.add_hotkey('capslock+left alt+shift+;', lambda: keyboard.send('left alt+shift+right'), suppress=True)
+
 # PAGE UP/DOWN
 keyboard.add_hotkey('capslock+comma', lambda: keyboard.send('page up'), suppress=True)
 keyboard.add_hotkey('capslock+.', lambda: keyboard.send('page down'), suppress=True)
@@ -54,11 +68,13 @@ keyboard.add_hotkey('capslock+right alt+backspace', lambda: keyboard.send('ctrl+
 # keyboard.add_hotkey('capslock+ctrl+shift+j', lambda: keyboard.send('ctrl+shift+left'), suppress=True)
 # keyboard.add_hotkey('capslock+ctrl+shift+;', lambda: keyboard.send('ctrl+shift+right'), suppress=True)
 # keyboard.add_hotkey('ctrl+shift+x', lambda: keyboard.send('shift+left'), suppress=True)
-# keyboard.add_hotkey('ctrl+shift+x', lambda: hold_shift(), suppress=True)
+# keyboard.add_hotkey('ctrl+shift+x', lambda: fn_test(), suppress=True)
 #
-# def hold_shift():
-#     keyboard.press('left')
-#     keyboard.release('left')
+# def fn_test():
+#     keyboard.press('alt')
+#     keyboard.press('down')
+#     keyboard.release('down')
+#     keyboard.release('alt')
 
 # FUNCTIONS: 
 
@@ -66,10 +82,12 @@ keyboard.add_hotkey('capslock+right alt+backspace', lambda: keyboard.send('ctrl+
 def empty():
     pass
 
+# superfluous loop used for testing in the debugger:
 def main():
     flag = 1
     while(flag): 
         pass
 
+# super flu as well; for testing purposes:
 if __name__ == '__main__':
     main()
